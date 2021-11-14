@@ -30,9 +30,8 @@ int main(int argc, char const *argv[])
 
     char bufInput[4096];
     int len = 0;
-    while((len = read(STDIN_FILENO, bufInput, 4096)) > 0) {
+    while((len = read(STDIN_FILENO, bufInput, 4096)) > 0)
         write(socketfd, bufInput, len); 
-    }
 
     close(socketfd);
 
