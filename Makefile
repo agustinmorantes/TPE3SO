@@ -13,13 +13,13 @@ CLIENT_H=$(wildcard client/*.h)
 all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SERVER_OBJ) $(SERVER_H)
-	gcc -o $(SERVER) $(SERVER_OBJ)
+	gcc -g -o $(SERVER) $(SERVER_OBJ) -lm
 
 $(CLIENT): $(CLIENT_OBJ) $(CLIENT_H)
-	gcc -o $(CLIENT) $(CLIENT_OBJ)
+	gcc -g -o $(CLIENT) $(CLIENT_OBJ)
 
 %.o: %.c
-	gcc -c -o $@ $<
+	gcc -g -c -o $@ $<
 
 clean: 
 	@rm $(SERVER) $(CLIENT) $(SERVER_OBJ) $(CLIENT_OBJ)
