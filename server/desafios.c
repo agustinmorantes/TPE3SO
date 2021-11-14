@@ -49,13 +49,21 @@ void desafio7() {
             fflush(stdout);
         } else {
             fprintf(stderr,"%c",error[i++]);
-            fflush(stderr);
         }
-
     }
 
-    if (i < 15)
+    if (i < 100)
+        fprintf(stderr,"%s",&error[i]);
+    
+
+    if (j < 15)
         printf("%s",&respuesta[i]);
 
     putchar('\n');
+}
+
+void desafio9() {
+    printf("latexme\n");
+    char * eq = "y=2+2";
+    printf("Si\n%s\nEntonces\ny = ", eq);
 }
