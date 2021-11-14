@@ -10,6 +10,7 @@ typedef struct {
 void desafio1();
 void desafio2();
 void desafio3();
+void desafio7();
 
 static Desafio desafios[DESAFIO_COUNT] = {
     {"entendido", (DesafioFunc)desafio1},
@@ -17,7 +18,7 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"42", (DesafioFunc)desafio3}, //EBADF
     {}, //strings:277
     {}, //.RUN_ME
-    {}, //Filter error
+    {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
     {}, //Fondo en negro
     {}, //Latex
     {}, //quine.c
