@@ -49,32 +49,39 @@ int main(int argc, char const *argv[])
         return -1;
     }
 
-    
+    char line[4096];
+    size_t len = 0; 
+    FILE* clientFile = fdopen(clientfd, "r");
+
     for(int i = 0; i < DESAFIO_COUNT; i++) {
-        char buf[4096];
-        int len = 0;
         int wrong = 0;
         do {
             if(wrong) {
-                printf("Respuesta incorrecta: %s\n", buf);
+                printf("Respuesta incorrecta: %s %d\n", line, len);
                 sleep(2);
             }
 
             clear();
 
             desafios[i].setup();
-            if((len = read(clientfd, buf, 4095)) <= 0) {
+            if(fgets(line, 4095, clientFile) <= 0) {
+                fclose(clientFile);
                 close(clientfd);
                 close(serverfd);
                 return 0;
             }
-            buf[len] = 0;
-        } while ((wrong = strncmp(buf, desafios[i].pass, strlen(desafios[i].pass))) != 0);
+
+            len = strlen(line)-1;
+            
+        } while ((wrong = strlen(desafios[i].pass) != len) || (wrong = strncmp(line, desafios[i].pass, len)) != 0);
     }
 
     clear();
     printf("Felicidades!\n");
+    printf("SEGFAULT\n");
+    printf("na mentira\n");
 
+    fclose(clientFile);
     close(clientfd);
     close(serverfd);
 
