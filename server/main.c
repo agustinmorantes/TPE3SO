@@ -57,7 +57,7 @@ int main(int argc, char const *argv[])
         int wrong = 0;
         do {
             if(wrong) {
-                printf("Respuesta incorrecta: %s %d\n", line, len);
+                printf("Respuesta incorrecta: %s\n", line);
                 sleep(2);
             }
 
