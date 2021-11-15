@@ -10,21 +10,27 @@ typedef struct {
 void desafio1();
 void desafio2();
 void desafio3();
+void desafio4();
+void desafio5();
+void desafio6();
 void desafio7();
+void desafio8();
 void desafio9();
 void desafio10();
+void desafio11();
 void desafio12();
 
 static Desafio desafios[DESAFIO_COUNT] = {
     {"entendido", (DesafioFunc)desafio1},
-    {"https://www.youtube.com/watch?v=dQw4w9WgXcQ", (DesafioFunc)desafio2}, // Imagen
-    {"42", (DesafioFunc)desafio3}, //EBADF
+    {"itba", (DesafioFunc)desafio2}, //Telefono
+    {"rickroll", (DesafioFunc)desafio3}, // Imagen
+    {"42", (DesafioFunc)desafio4}, //EBADF
     {}, //strings:277
     {}, //.RUN_ME
     {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
-    {}, //Fondo en negro
+    {"BUmyYq5XxXGt", (DesafioFunc)desafio8}, //Fondo en negro
     {"4", (DesafioFunc)desafio9}, //Latex
     {"chin_chu_lan_cha", (DesafioFunc)desafio10}, //quine.c
-    {}, //b gdme
+    {"socotroco", (DesafioFunc)desafio11}, //b gdme
     {"normal", (DesafioFunc)desafio12}, //normal
 };
