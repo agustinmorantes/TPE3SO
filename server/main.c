@@ -63,7 +63,7 @@ int main(int argc, char const *argv[])
             clear();
 
             desafios[i].setup();
-            if((len = read(clientfd, buf, 4095)) < 0) {
+            if((len = read(clientfd, buf, 4095)) <= 0) {
                 close(clientfd);
                 close(serverfd);
                 return 0;

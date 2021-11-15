@@ -10,6 +10,8 @@ typedef struct {
 void desafio1();
 void desafio2();
 void desafio3();
+void desafio7();
+void desafio9();
 void desafio10();
 void desafio12();
 
@@ -19,9 +21,9 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"42", (DesafioFunc)desafio3}, //EBADF
     {}, //strings:277
     {}, //.RUN_ME
-    {}, //Filter error
+    {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
     {}, //Fondo en negro
-    {}, //Latex
+    {"4", (DesafioFunc)desafio9}, //Latex
     {"chin_chu_lan_cha", (DesafioFunc)desafio10}, //quine.c
     {}, //b gdme
     {"normal", (DesafioFunc)desafio12}, //normal
