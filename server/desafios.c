@@ -28,6 +28,10 @@ void desafio4() {
     perror("Write");
 }
 
+void desafio5() {
+    printf("strings:45\n");
+}
+
 double randNormalize(void) {
     return rand() / ( (double) RAND_MAX + 1);
 }

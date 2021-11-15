@@ -25,7 +25,7 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"itba", (DesafioFunc)desafio2}, //Telefono
     {"rickroll", (DesafioFunc)desafio3}, // Imagen
     {"42", (DesafioFunc)desafio4}, //EBADF
-    {}, //strings:277
+    {"too_easy", (DesafioFunc)desafio5}, //strings:45
     {}, //.RUN_ME
     {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
     {"BUmyYq5XxXGt", (DesafioFunc)desafio8}, //Fondo en negro
