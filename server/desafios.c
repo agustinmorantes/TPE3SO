@@ -28,7 +28,7 @@ void desafio4() {
     perror("Write");
 }
 
-void desafio4() {
+void desafio5() {
     printf("strings:45\n");
 }
 
