@@ -22,7 +22,7 @@ $(CLIENT): $(CLIENT_OBJ) $(CLIENT_H)
 
 %.o: %.c
 	gcc -g -c -o $@ $<
-
+  
 %.o: %.asm
 	nasm -felf64 -o $@ $<
 

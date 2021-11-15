@@ -1,4 +1,4 @@
-#define DESAFIO_COUNT 11
+#define DESAFIO_COUNT 12
 
 typedef void (*DesafioFunc)();
 
@@ -18,6 +18,7 @@ void desafio8();
 void desafio9();
 void desafio10();
 void desafio11();
+void desafio12();
 
 static Desafio desafios[DESAFIO_COUNT] = {
     {"entendido", (DesafioFunc)desafio1},
@@ -26,10 +27,10 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"42", (DesafioFunc)desafio4}, //EBADF
     {}, //strings:277
     {}, //.RUN_ME
-    {}, //Filter error
+    {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
     {"BUmyYq5XxXGt", (DesafioFunc)desafio8}, //Fondo en negro
-    {}, //Latex
-    {}, //quine.c
+    {"4", (DesafioFunc)desafio9}, //Latex
+    {"chin_chu_lan_cha", (DesafioFunc)desafio10}, //quine.c
     {"socotroco", (DesafioFunc)desafio11}, //b gdme
-    {}, //normal
+    {"normal", (DesafioFunc)desafio12}, //normal
 };
