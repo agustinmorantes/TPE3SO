@@ -1,0 +1,1 @@
+GCC_FLAGS = -std=gnu99

@@ -1,3 +1,5 @@
+include Makefile.inc
+
 SERVER=server.out
 CLIENT=client.out
 
@@ -15,14 +17,14 @@ CLIENT_H=$(wildcard client/*.h)
 all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SERVER_OBJ) $(SERVER_H)
-	gcc -g -o $(SERVER) $(SERVER_OBJ) -lm
+	gcc -g -o $(SERVER) $(SERVER_OBJ) -lm $(GCC_FLAGS)
 	objcopy --add-section .custom=custom_section --set-section-flags .custom=noload,readonly $(SERVER)
 
 $(CLIENT): $(CLIENT_OBJ) $(CLIENT_H)
-	gcc -g -o $(CLIENT) $(CLIENT_OBJ)
+	gcc -g -o $(CLIENT) $(CLIENT_OBJ) $(GCC_FLAGS)
 
 %.o: %.c
-	gcc -g -c -o $@ $<
+	gcc -g -c -o $@ $< $(GCC_FLAGS)
   
 %.o: %.asm
 	nasm -felf64 -o $@ $<
