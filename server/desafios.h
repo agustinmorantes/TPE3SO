@@ -1,4 +1,4 @@
-#define DESAFIO_COUNT 11
+#define DESAFIO_COUNT 12
 
 typedef void (*DesafioFunc)();
 
@@ -10,6 +10,8 @@ typedef struct {
 void desafio1();
 void desafio2();
 void desafio3();
+void desafio10();
+void desafio12();
 
 static Desafio desafios[DESAFIO_COUNT] = {
     {"entendido", (DesafioFunc)desafio1},
@@ -20,7 +22,7 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {}, //Filter error
     {}, //Fondo en negro
     {}, //Latex
-    {}, //quine.c
+    {"chin_chu_lan_cha", (DesafioFunc)desafio10}, //quine.c
     {}, //b gdme
-    {}, //normal
+    {"normal", (DesafioFunc)desafio12}, //normal
 };
