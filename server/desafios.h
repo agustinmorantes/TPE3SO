@@ -17,9 +17,10 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"entendido", (DesafioFunc)desafio1},
     {"https://www.youtube.com/watch?v=dQw4w9WgXcQ", (DesafioFunc)desafio2}, // Imagen
     {"42", (DesafioFunc)desafio3}, //EBADF
-    
+    {}, //strings:277
+    {}, //.RUN_ME
     {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
-    
+    {}, //Fondo en negro
     {"4", (DesafioFunc)desafio9}, //Latex
     {}, //quine.c
     {}, //b gdme
