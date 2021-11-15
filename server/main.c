@@ -78,7 +78,8 @@ int main(int argc, char const *argv[])
 
     clear();
     printf("Felicidades!\n");
-    printf("SEGFAULT\n");
+    printf("Segmentation fault (core dumped)\n");
+    sleep(4);
     printf("na mentira\n");
 
     fclose(clientFile);
