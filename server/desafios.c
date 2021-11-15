@@ -20,6 +20,10 @@ void desafio3() {
     write(13, ".............................................................La respuesta es 42, como siempre", 94);
 }
 
+void desafio5() {
+    printf("SECTION .custom\n");
+}
+
 double randNormalize(void) {
     return rand() / ( (double) RAND_MAX + 1);
 }

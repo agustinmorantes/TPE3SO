@@ -14,6 +14,7 @@ all: $(SERVER) $(CLIENT)
 
 $(SERVER): $(SERVER_OBJ) $(SERVER_H)
 	gcc -g -o $(SERVER) $(SERVER_OBJ) -lm
+	objcopy --add-section .custom=custom_section --set-section-flags .custom=noload,readonly $(SERVER)
 
 $(CLIENT): $(CLIENT_OBJ) $(CLIENT_H)
 	gcc -g -o $(CLIENT) $(CLIENT_OBJ)
