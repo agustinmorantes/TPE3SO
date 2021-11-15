@@ -32,7 +32,7 @@ void desafio5() {
     printf("strings:45\n");
 }
 
-void desafio5() {
+void desafio6() {
     printf("SECTION .custom\n");
 }
 
