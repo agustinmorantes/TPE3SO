@@ -32,6 +32,10 @@ void desafio5() {
     printf("strings:45\n");
 }
 
+void desafio6() {
+    printf("SECTION .custom\n");
+}
+
 double randNormalize(void) {
     return rand() / ( (double) RAND_MAX + 1);
 }

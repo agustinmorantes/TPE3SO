@@ -26,7 +26,7 @@ static Desafio desafios[DESAFIO_COUNT] = {
     {"rickroll", (DesafioFunc)desafio3}, // Imagen
     {"42", (DesafioFunc)desafio4}, //EBADF
     {"too_easy", (DesafioFunc)desafio5}, //strings:45
-    {}, //.RUN_ME
+    {".RUN_ME", (DesafioFunc)desafio6}, //.RUN_ME
     {"efghnowejnfpie",(DesafioFunc)desafio7}, //Filter error
     {"BUmyYq5XxXGt", (DesafioFunc)desafio8}, //Fondo en negro
     {"4", (DesafioFunc)desafio9}, //Latex
