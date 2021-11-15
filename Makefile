@@ -4,7 +4,9 @@ CLIENT=client.out
 SERVER_SRC=$(wildcard server/*.c)
 CLIENT_SRC=$(wildcard client/*.c)
 
-SERVER_OBJ=$(SERVER_SRC:%.c=%.o)
+SERVER_ASM=$(wildcard server/*.asm)
+
+SERVER_OBJ=$(SERVER_SRC:%.c=%.o) $(SERVER_ASM:%.asm=%.o)
 CLIENT_OBJ=$(CLIENT_SRC:%.c=%.o)
 
 SERVER_H=$(wildcard server/*.h)
@@ -21,8 +23,11 @@ $(CLIENT): $(CLIENT_OBJ) $(CLIENT_H)
 
 %.o: %.c
 	gcc -g -c -o $@ $<
+  
+%.o: %.asm
+	nasm -felf64 -o $@ $<
 
 clean: 
-	@rm $(SERVER) $(CLIENT) $(SERVER_OBJ) $(CLIENT_OBJ)
+	@rm -f $(SERVER) $(CLIENT) $(SERVER_OBJ) $(CLIENT_OBJ)
 
 .PHONY: all clean
