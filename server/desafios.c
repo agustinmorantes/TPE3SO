@@ -29,7 +29,7 @@ void desafio4() {
 }
 
 void desafio5() {
-    printf("strings:48\n");
+    printf("strings:47\n");
 }
 
 void desafio6() {
